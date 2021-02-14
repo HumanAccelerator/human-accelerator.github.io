@@ -1,0 +1,76 @@
+(function(d){var h=[];d.loadImages=function(a,e){"string"==typeof a&&(a=[a]);for(var f=a.length,g=0,b=0;b<f;b++){var c=document.createElement("img");c.onload=function(){g++;g==f&&d.isFunction(e)&&e()};c.src=a[b];h.push(c)}}})(window.jQuery);
+var wl;
+
+var lwi=-1;function thresholdPassed(){var w=$(window).width();var p=false;var cw=0;if(w>=480){cw++;}if(w>=768){cw++;}if(w>=960){cw++;}if(w>=1200){cw++;}if(lwi!=cw){p=true;}lwi=cw;return p;}
+!function(){if("Promise"in window){var e,t,r=document,n=function(){return r.createElement("link")},o=new Set,a=n(),i=a.relList&&a.relList.supports&&a.relList.supports("prefetch"),s=location.href.replace(/#[^#]+$/,"");o.add(s);var c=function(e){var t=location,r="http:",n="https:";if(e&&e.href&&e.origin==t.origin&&[r,n].includes(e.protocol)&&(e.protocol!=r||t.protocol!=n)){var o=e.pathname;if(!(e.hash&&o+e.search==t.pathname+t.search||".html"!=o.substr(-5)&&".html"!=o.substr(-5)&&"/"!=o.substr(-1)))return!0}},u=function(e){var t=e.replace(/#[^#]+$/,"");if(!o.has(t)){if(i){var a=n();a.rel="prefetch",a.href=t,r.head.appendChild(a)}else{var s=new XMLHttpRequest;s.open("GET",t,s.withCredentials=!0),s.send()}o.add(t)}},f=function(e){return e.target.closest("a")},p=function(t){var r=t.relatedTarget;r&&f(t)==r.closest("a")||e&&(clearTimeout(e),e=void 0)},l={capture:!0,passive:!0};r.addEventListener("touchstart",function(e){t=performance.now();var r=f(e);c(r)&&u(r.href)},l),r.addEventListener("mouseover",function(r){if(!(performance.now()-t<1200)){var n=f(r);c(n)&&(n.addEventListener("mouseout",p,{passive:!0}),e=setTimeout(function(){u(n.href),e=void 0},80))}},l)}}();
+
+$(function(){
+r=function(){if(thresholdPassed()){dpi=window.devicePixelRatio;if($(window).width()>=1200){var a='data-src';var e=document.querySelector('.js3 .slide0');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-2400.jpg':'images/none-1200.jpg');
+var a='data-src';var e=document.querySelector('.js3 .slide1');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-2400-1.jpg':'images/none-1200-1.jpg');
+var a='data-src';var e=document.querySelector('.js3 .slide2');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-2400-2.jpg':'images/none-1200-2.jpg');
+var a='data-src';var e=document.querySelector('.js3 .slide3');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-2400-3.jpg':'images/none-1200-3.jpg');
+var a='data-src';var e=document.querySelector('.js3 .slide4');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-2400-4.jpg':'images/none-1200-4.jpg');
+var a='data-src';var e=document.querySelector('.js3 .slide5');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-2400-5.jpg':'images/none-1200-5.jpg');
+var a='data-src';var e=document.querySelector('.js4 .slide0');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-2400-6.jpg':'images/none-1200-6.jpg');
+var a='data-src';var e=document.querySelector('.js4 .slide1');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-2400-7.jpg':'images/none-1200-7.jpg');
+var a='data-src';var e=document.querySelector('.js4 .slide2');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-2400-8.jpg':'images/none-1200-8.jpg');
+var a='data-src';var e=document.querySelector('.js4 .slide3');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-2400-9.jpg':'images/none-1200-9.jpg');
+var a='data-src';var e=document.querySelector('.js4 .slide4');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-2400-10.jpg':'images/none-1200-10.jpg');
+var a='data-src';var e=document.querySelector('.js4 .slide5');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-2400-11.jpg':'images/none-1200-11.jpg');
+var e=document.querySelector('.js1');e.setAttribute('src','images/pasted-image-658.png');}else if($(window).width()>=960){var a='data-src';var e=document.querySelector('.js3 .slide0');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-1920.jpg':'images/none-960-1.jpg');
+var a='data-src';var e=document.querySelector('.js3 .slide1');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-1920-1.jpg':'images/none-960-3.jpg');
+var a='data-src';var e=document.querySelector('.js3 .slide2');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-1920-2.jpg':'images/none-960-5.jpg');
+var a='data-src';var e=document.querySelector('.js3 .slide3');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-1920-3.jpg':'images/none-960-7.jpg');
+var a='data-src';var e=document.querySelector('.js3 .slide4');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-1920-4.jpg':'images/none-960-9.jpg');
+var a='data-src';var e=document.querySelector('.js3 .slide5');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-1920-5.jpg':'images/none-960-11.jpg');
+var a='data-src';var e=document.querySelector('.js4 .slide0');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-1920-6.jpg':'images/none-960-12.jpg');
+var a='data-src';var e=document.querySelector('.js4 .slide1');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-1920-7.jpg':'images/none-960-13.jpg');
+var a='data-src';var e=document.querySelector('.js4 .slide2');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-1920-8.jpg':'images/none-960-14.jpg');
+var a='data-src';var e=document.querySelector('.js4 .slide3');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-1920-9.jpg':'images/none-960-15.jpg');
+var a='data-src';var e=document.querySelector('.js4 .slide4');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-1920-10.jpg':'images/none-960-16.jpg');
+var a='data-src';var e=document.querySelector('.js4 .slide5');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-1920-11.jpg':'images/none-960-17.jpg');
+var e=document.querySelector('.js1');e.setAttribute('src','images/pasted-image-526-1.png');}else if($(window).width()>=768){var a='data-src';var e=document.querySelector('.js3 .slide0');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-1536.jpg':'images/none-768.jpg');
+var a='data-src';var e=document.querySelector('.js3 .slide1');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-1536-1.jpg':'images/none-768-1.jpg');
+var a='data-src';var e=document.querySelector('.js3 .slide2');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-1536-2.jpg':'images/none-768-2.jpg');
+var a='data-src';var e=document.querySelector('.js3 .slide3');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-1536-3.jpg':'images/none-768-3.jpg');
+var a='data-src';var e=document.querySelector('.js3 .slide4');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-1536-4.jpg':'images/none-768-4.jpg');
+var a='data-src';var e=document.querySelector('.js3 .slide5');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-1536-5.jpg':'images/none-768-5.jpg');
+var a='data-src';var e=document.querySelector('.js4 .slide0');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-1536-6.jpg':'images/none-768-6.jpg');
+var a='data-src';var e=document.querySelector('.js4 .slide1');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-1536-7.jpg':'images/none-768-7.jpg');
+var a='data-src';var e=document.querySelector('.js4 .slide2');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-1536-8.jpg':'images/none-768-8.jpg');
+var a='data-src';var e=document.querySelector('.js4 .slide3');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-1536-9.jpg':'images/none-768-9.jpg');
+var a='data-src';var e=document.querySelector('.js4 .slide4');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-1536-10.jpg':'images/none-768-10.jpg');
+var a='data-src';var e=document.querySelector('.js4 .slide5');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-1536-11.jpg':'images/none-768-11.jpg');
+var e=document.querySelector('.js1');e.setAttribute('src','images/pasted-image-415.png');}else if($(window).width()>=480){var a='data-src';var e=document.querySelector('.js3 .slide0');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-960.jpg':'images/none-480.jpg');
+var a='data-src';var e=document.querySelector('.js3 .slide1');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-960-2.jpg':'images/none-480-1.jpg');
+var a='data-src';var e=document.querySelector('.js3 .slide2');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-960-4.jpg':'images/none-480-2.jpg');
+var a='data-src';var e=document.querySelector('.js3 .slide3');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-960-6.jpg':'images/none-480-3.jpg');
+var a='data-src';var e=document.querySelector('.js3 .slide4');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-960-8.jpg':'images/none-480-4.jpg');
+var a='data-src';var e=document.querySelector('.js3 .slide5');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-960-10.jpg':'images/none-480-5.jpg');
+var a='data-src';var e=document.querySelector('.js4 .slide0');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-960.jpg':'images/none-480.jpg');
+var a='data-src';var e=document.querySelector('.js4 .slide1');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-960-2.jpg':'images/none-480-1.jpg');
+var a='data-src';var e=document.querySelector('.js4 .slide2');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-960-4.jpg':'images/none-480-2.jpg');
+var a='data-src';var e=document.querySelector('.js4 .slide3');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-960-6.jpg':'images/none-480-3.jpg');
+var a='data-src';var e=document.querySelector('.js4 .slide4');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-960-8.jpg':'images/none-480-4.jpg');
+var a='data-src';var e=document.querySelector('.js4 .slide5');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-960-10.jpg':'images/none-480-5.jpg');
+var e=document.querySelector('.js1');e.setAttribute('src',(dpi>1)?'images/pasted-image-526.png':'images/pasted-image-263.png');}else{var a='data-src';var e=document.querySelector('.js3 .slide0');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-640.jpg':'images/none-320.jpg');
+var a='data-src';var e=document.querySelector('.js3 .slide1');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-640-1.jpg':'images/none-320-1.jpg');
+var a='data-src';var e=document.querySelector('.js3 .slide2');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-640-2.jpg':'images/none-320-2.jpg');
+var a='data-src';var e=document.querySelector('.js3 .slide3');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-640-3.jpg':'images/none-320-3.jpg');
+var a='data-src';var e=document.querySelector('.js3 .slide4');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-640-4.jpg':'images/none-320-4.jpg');
+var a='data-src';var e=document.querySelector('.js3 .slide5');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-640-5.jpg':'images/none-320-5.jpg');
+var a='data-src';var e=document.querySelector('.js4 .slide0');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-640.jpg':'images/none-320.jpg');
+var a='data-src';var e=document.querySelector('.js4 .slide1');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-640-1.jpg':'images/none-320-1.jpg');
+var a='data-src';var e=document.querySelector('.js4 .slide2');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-640-2.jpg':'images/none-320-2.jpg');
+var a='data-src';var e=document.querySelector('.js4 .slide3');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-640-3.jpg':'images/none-320-3.jpg');
+var a='data-src';var e=document.querySelector('.js4 .slide4');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-640-4.jpg':'images/none-320-4.jpg');
+var a='data-src';var e=document.querySelector('.js4 .slide5');if(e.hasAttribute('src')){a='src';}e.setAttribute(a,(dpi>1)?'images/none-640-5.jpg':'images/none-320-5.jpg');
+var e=document.querySelector('.js1');e.setAttribute('src',(dpi>1)?'images/pasted-image-350.png':'images/pasted-image-175.png');}}};
+if(!window.HTMLPictureElement){$(window).resize(r);r();}
+(function(){$('a[href^="#"]:not(.allowConsent,.noConsent,.denyConsent,.removeConsent)').each(function(i,e){$(e).click(function(){var t=e.hash.length>1?$('[name="'+e.hash.slice(1)+'"]').offset().top:0;return $("html, body").animate({scrollTop:t},400),!1})})})();
+$('.js3 .slider').slick({lazyLoad: 'ondemand',slidesToShow: 1,slidesToScroll: 1,overflow: 'hidden',fade: true,slide: 'div',cssEase: 'linear',speed: 300,dots: false,arrows: false,infinite: true,autoplay: true,pauseOnHover: false,autoplaySpeed: 2500});$('.js4 .slider').slick({lazyLoad: 'ondemand',slidesToShow: 1,slidesToScroll: 1,overflow: 'hidden',fade: true,slide: 'div',cssEase: 'linear',speed: 300,dots: false,arrows: false,infinite: true,autoplay: true,pauseOnHover: false,autoplaySpeed: 2500});wl=new woolite();
+wl.init();
+wl.addAnimation($('.js2')[0], "3.60s", "0.00s", 1, 100);
+wl.start();
+
+});
